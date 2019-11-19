@@ -11,17 +11,17 @@ import "../../ui/pages/register/register.js";
 
 // register
 FlowRouter.route("/register", {
-  name: "App.home",
+  name: "register",
   action() {
-    BlazeLayout.render("App_body", { main: "App_register" });
+    BlazeLayout.render("App_body", { main: "register" });
   }
 });
 
 // login page
 FlowRouter.route("/login", {
-  name: "App.home",
+  name: "login",
   action() {
-    BlazeLayout.render("App_body", { main: "App_login" });
+    BlazeLayout.render("App_body", { main: "login" });
   }
 });
 
