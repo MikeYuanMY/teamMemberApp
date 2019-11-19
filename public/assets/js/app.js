@@ -5,6 +5,8 @@
  *
  */
 
+console.log("App.js called")
+
 var App = function() {
     // Helper variables - set in uiInit()
     var $lHtml, $lBody, $lPage, $lSidebar, $lSidebarScroll, $lSideOverlay, $lSideOverlayScroll, $lHeader, $lMain, $lFooter;
@@ -486,7 +488,7 @@ var App = function() {
 
     // Material inputs helper
     var uiForms = function() {
-        jQuery('.form-material.floating > .form-control').each(function(){
+        jQuery('.form-material.floating > .form-control').each(function () {
             var $input  = jQuery(this);
             var $parent = $input.parent('.form-material');
 
@@ -495,6 +497,7 @@ var App = function() {
             }
 
             $input.on('change', function(){
+                
                 if ($input.val()) {
                     $parent.addClass('open');
                 } else {

@@ -2,9 +2,10 @@ import { FlowRouter } from "meteor/kadira:flow-router";
 import { Meteor } from "meteor/meteor";
 import { jQuery } from "meteor/jquery";
 import { Template } from "meteor/templating";
-
+import { $ } from "meteor/jquery";
 import "./login.html";
 
+import "/public/assets/js/app.js";
 //import "/public/assets/js/pages/base_pages_login.js";
 if (Meteor.isClient) {
   Template.login.events({

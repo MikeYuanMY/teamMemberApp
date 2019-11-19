@@ -32,5 +32,5 @@ accounts-password
 twbs:bootstrap
 themeteorchef:jquery-validation
 jquery
-tprzytula:remember-me
+# tprzytula:remember-me
 fortawesome:fontawesome
