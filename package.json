@@ -6,7 +6,8 @@
     "test": "meteor test --once --driver-package meteortesting:mocha"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.4",
+    "@babel/runtime": "^7.7.2",
+    "bcrypt": "^3.0.7",
     "meteor-node-stubs": "^0.4.1"
   },
   "devDependencies": {
