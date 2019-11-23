@@ -5,7 +5,6 @@
  *
  */
 
-console.log("App.js called")
 
 var App = function() {
     // Helper variables - set in uiInit()

@@ -68,10 +68,18 @@ if (Meteor.isClient) {
       },
       // Handle form submit
       submitHandler: function submitHandler(event) {
-        console.log("submit button clicked");
         const username = $("[name=loginUsername]").val();
         const password = $("[name=loginPassword]").val();
-        console.log(username, password);
+
+        Meteor.loginWithPassword(username, password, function(error) {
+          if (error) {
+            validator.showErrors({
+              loginUsername: error.reason
+            });
+          } else {
+            FlowRouter.go("/personal");
+          }
+        });
       }
     });
   });

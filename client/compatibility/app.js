@@ -4,7 +4,7 @@
  *  Description: UI Framework Custom Functionality (available to all pages)
  *
  */
-console.log("hello")
+
 var App = function() {
     // Helper variables - set in uiInit()
     var $lHtml, $lBody, $lPage, $lSidebar, $lSidebarScroll, $lSideOverlay, $lSideOverlayScroll, $lHeader, $lMain, $lFooter;
@@ -487,7 +487,7 @@ var App = function() {
     // Material inputs helper
     var uiForms = function () {
 
-        console.log("uiForm called")
+        
         
         jQuery('.form-material.floating > .form-control').each(function () {
             console.log(this)
@@ -1315,7 +1315,7 @@ var OneUI = App;
 // Initialize app when page loads
 jQuery(function(){
     if (typeof angular == 'undefined') {
-        console.log("App initiated!")
+       
         App.init();
     }
 });

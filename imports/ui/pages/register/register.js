@@ -100,24 +100,26 @@ if (Meteor.isClient) {
         const usernameVar = $("[name=registerUsername]").val();
         const emailVar = $("[name=registerEmail]").val();
         const passwordVar = $("[name=registerPassword]").val();
-        console.log("hello", usernameVar);
+        const firstName = $("[name=registerFirstName]").val();
+        const lastName = $("[name=registerLastName]").val();
+
         // // Register new User
-        // Accounts.createUser(
-        //   {
-        //     username: usernameVar,
-        //     email: emailVar,
-        //     password: passwordVar
-        //   },
-        //   error => {
-        //     if (error) {
-        //       validator.showErrors({
-        //         registerUsername: error.reason
-        //       });
-        //     } else {
-        //       FlowRouter.go("/home");
-        //     }
-        //   }
-        // );
+        Accounts.createUser(
+          {
+            username: usernameVar,
+            email: emailVar,
+            firstName: firstName,
+            lastName: lastName,
+            password: passwordVar
+          },
+          function(error) {
+            if (error) {
+              console.log("Error: " + error.reason);
+            } else {
+              FlowRouter.go("/personal");
+            }
+          }
+        );
       }
     });
   });

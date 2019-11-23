@@ -1,5 +1,5 @@
 import "./body.html";
-
+import "../../components/nav/nav.js";
 import "../../../../public/assets/js/core/jquery.min.js";
 import "../../../../public/assets/js/core/bootstrap.min.js";
 import "../../../../public/assets/js/core/jquery.slimscroll.min.js";

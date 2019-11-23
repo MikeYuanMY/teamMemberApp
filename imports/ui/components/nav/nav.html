@@ -1,0 +1,32 @@
+<template name='nav'>
+    <header id='header-navbar' class='content-mini content-minifull'>
+
+        <ul class="nav-header pull-left">
+            <li>
+                <a class="h5" href="/">
+                    <i class="fa fa-circle-o-notch text-primary"></i> <span
+                        class="h4 font-w600 sidebar-mini-hide">TeamMemberApp</span>
+                </a>
+            </li>
+            <li>
+                <a href="/personal" class="">Personal</a>
+            </li>
+            <li>
+                <a href="/teams" class="">Teams</a>
+            </li>
+        </ul>
+
+
+        <ul class='nav-header pull-right'>
+            <li>
+                Welcome, {{currentUser.username}}
+            </li>
+
+            <li>
+                <button class='btn btn-primary logout'>Log out</button>
+            </li>
+        </ul>
+
+    </header>
+
+</template>

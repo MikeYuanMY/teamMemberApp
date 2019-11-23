@@ -1,4 +1,14 @@
 <template name="App_home">
-  {{> hello}}
-  {{> info}}
+  {{>PageHeader text="Home Page"}}
+  {{#if currentUser}}
+  <h2>You are logged in</h2>
+  {{else}}
+
+  <h2>you are not logged in</h2>
+  <p>Please either log in or register</p>
+  <ul>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">login</a></li>
+  </ul>
+  {{/if}}
 </template>

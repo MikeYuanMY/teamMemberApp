@@ -1,0 +1,25 @@
+<template name="personal">
+  {{>PageHeader text="Personal"}}
+  <div class="row">
+    {{> Profile}} {{> Users}}
+  </div>
+</template>
+
+<template name="Users">
+  <h1>Users Select 2</h1>
+  <ul>
+    {{#each users}}
+    <li>id: {{_id}} name: {{fullName}}</li>
+    {{/each}}
+  </ul>
+
+  <select class="select2-dropdown" name="state">
+
+    <option></option>
+    
+    {{#each users}}
+    
+    <option value="{{_id}}">{{fullName}}</option>
+    {{/each}}
+  </select>
+</template>
