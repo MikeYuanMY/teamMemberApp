@@ -33,7 +33,8 @@ twbs:bootstrap
 themeteorchef:jquery-validation
 jquery
 # tprzytula:remember-me
-fortawesome:fontawesome
+fortawesome:fontawesome@=4.7.0
 msavin:mongol
 cleandersonlobo:sweetalert2
 natestrauser:select2
+check

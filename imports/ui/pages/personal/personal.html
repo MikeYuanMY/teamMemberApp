@@ -1,25 +1,41 @@
 <template name="personal">
   {{>PageHeader text="Personal"}}
   <div class="row">
-    {{> Profile}} {{> Users}}
+    <div class="col-md-6">
+      {{> Profile}}
+    </div>
+    <div class="col-md-3">
+
+      {{>UserTeams}}
+
+    </div>
+
   </div>
 </template>
 
-<template name="Users">
-  <h1>Users Select 2</h1>
-  <ul>
-    {{#each users}}
-    <li>id: {{_id}} name: {{fullName}}</li>
-    {{/each}}
-  </ul>
 
-  <select class="select2-dropdown" name="state">
 
-    <option></option>
-    
-    {{#each users}}
-    
-    <option value="{{_id}}">{{fullName}}</option>
-    {{/each}}
-  </select>
+<template name="UserTeams">
+
+  <div class="block">
+    <div class="block-header">
+      <ul class="block-options">
+
+      </ul>
+      <h3 class="block-title">User Teams</h3>
+    </div>
+    <div class="block-content">
+      {{#if userTeams}}
+
+      {{#each team in userTeams}}
+      <li><a href="/teams/{{team._id}}">{{team.name}}</a></li>
+      {{/each}}
+
+      {{else}}
+      <p>This user has not joined any team</p>
+      <p>Go to Teams to select team and add yourself</p>
+      {{/if}}
+    </div>
+  </div>
+
 </template>

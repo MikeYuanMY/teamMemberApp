@@ -11,6 +11,7 @@ import "../../ui/pages/login/login.js";
 import "../../ui/pages/register/register.js";
 import "../../ui/pages/personal/personal.js";
 import "../../ui/pages/teams/teams.js";
+import "../../ui/pages/teamDetails/TeamDetails.js";
 // Set up all routes in the app
 
 // register
@@ -70,6 +71,20 @@ FlowRouter.route("/teams", {
   name: "team",
   action() {
     BlazeLayout.render("App_body", { main: "Teams" });
+  }
+});
+
+FlowRouter.route("/teams/:id", {
+  triggersEnter: [
+    (context, redirect) => {
+      if (!Meteor.userId()) {
+        redirect("/");
+      }
+    }
+  ],
+  name: "teamDetails",
+  action() {
+    BlazeLayout.render("App_body", { main: "TeamDetails" });
   }
 });
 // FlowRouter.route("/", {

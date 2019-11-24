@@ -1,7 +1,7 @@
 <template name="App_body">
 
   <div id="page-container" class='header-navbar-fixed'>
-    {{#if currentUser}}
+
 
     {{> nav}}
     <div id="main-container">
@@ -10,14 +10,7 @@
       </div>
     </div>
 
-    {{else}}
 
-    <div id="main-container">
-      <div class="content contenet-narrow">
-        {{> Template.dynamic template=main}}
-      </div>
-    </div>
-    {{/if}}
 
   </div>
 
