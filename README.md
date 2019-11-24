@@ -30,6 +30,10 @@ If you cannot start meteor application, run the following command `meteor reset`
 5. User can add name and description when create a New Team on **Teams** page
 6. User can click on a team *block* to go to the Team Details page to *view* team members and *add* team member
 
+## Pacakges
+For the Meteor packages details refer to the following file 
+
+[Packages](./.meteor/packages)
 
 ## ToDo
 - Code clean up and factorizing function 
