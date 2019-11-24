@@ -13,6 +13,32 @@ if (Meteor.isClient) {
       // Prevent default browser form submit
 
       event.preventDefault();
+      const username = $("[name=loginUsername]").val();
+      const password = $("[name=loginPassword]").val();
+
+      Meteor.loginWithPassword(username, password, function(error) {
+        if (error) {
+          validator.showErrors({
+            loginUsername: error.reason
+          });
+        } else {
+          FlowRouter.go("/personal");
+        }
+      });
+    },
+    "click .login-facebook": function(e) {
+      e.preventDefault();
+
+      Meteor.loginWithFacebook(
+        { requestPermissions: ["public_profile", "email"] },
+        function(err) {
+          if (err) {
+            console.log("Handle errors here: ", err);
+          } else {
+            FlowRouter.go("/personal");
+          }
+        }
+      );
     }
   });
 
@@ -65,22 +91,22 @@ if (Meteor.isClient) {
         jQuery(e)
           .closest(".help-block")
           .remove();
-      },
-      // Handle form submit
-      submitHandler: function submitHandler(event) {
-        const username = $("[name=loginUsername]").val();
-        const password = $("[name=loginPassword]").val();
-
-        Meteor.loginWithPassword(username, password, function(error) {
-          if (error) {
-            validator.showErrors({
-              loginUsername: error.reason
-            });
-          } else {
-            FlowRouter.go("/personal");
-          }
-        });
       }
+      // Handle form submit
+      // submitHandler: function submitHandler(event) {
+      //   const username = $("[name=loginUsername]").val();
+      //   const password = $("[name=loginPassword]").val();
+
+      //   Meteor.loginWithPassword(username, password, function(error) {
+      //     if (error) {
+      //       validator.showErrors({
+      //         loginUsername: error.reason
+      //       });
+      //     } else {
+      //       FlowRouter.go("/personal");
+      //     }
+      //   });
+      // }
     });
   });
 }

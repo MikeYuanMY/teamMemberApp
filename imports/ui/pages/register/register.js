@@ -9,6 +9,20 @@ import { Template } from "meteor/templating";
 if (Meteor.isClient) {
   // Prevent default browser form submit
   Template.register.events({
+    "click .login-facebook": function(e) {
+      e.preventDefault();
+
+      Meteor.loginWithFacebook(
+        { requestPermissions: ["public_profile", "email"] },
+        function(err) {
+          if (err) {
+            console.log("Handle errors here: ", err);
+          } else {
+            FlowRouter.go("/personal");
+          }
+        }
+      );
+    },
     "submit form": function registerUser(event) {
       event.preventDefault();
     }
