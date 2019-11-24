@@ -40,6 +40,7 @@ If you cannot start meteor application, run the following command `meteor reset`
 - Provide functionality to view other user profile
 - Implement Ownership of the team 
 - Implement SimpleSchema and AutoForm
+- Fixing the icon rendering issue on Teams page
 
 
 ## Challenges
