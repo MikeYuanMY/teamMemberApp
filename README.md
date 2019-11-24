@@ -32,6 +32,8 @@ If you cannot start meteor application, run the following command `meteor reset`
 
 
 ## ToDo
+- Code clean up and factorizing function 
+- Breaking templates into re-usable components
 - Provide ability to edit TeamDetails
 - Provide ability to remove Team
 - Provide ability to remove Team Member from Team
