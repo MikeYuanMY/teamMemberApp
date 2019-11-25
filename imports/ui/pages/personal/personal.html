@@ -26,10 +26,11 @@
     </div>
     <div class="block-content">
       {{#if userTeams}}
-
-      {{#each team in userTeams}}
-      <li><a href="/teams/{{team._id}}">{{team.name}}</a></li>
-      {{/each}}
+      <ul>
+        {{#each team in userTeams}}
+        <li><a href="/teams/{{team._id}}">{{team.name}}</a></li>
+        {{/each}}
+      </ul>
 
       {{else}}
       <p>This user has not joined any team</p>
