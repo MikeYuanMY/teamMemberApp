@@ -12,7 +12,7 @@ Template.TeamDetails.helpers({
     return Teams.findOne({ _id: teamID });
   },
   users() {
-    return Meteor.users.find();
+    return Meteor.users.find({}, { sort: { "profile.firstName": 1 } }).fetch();
   },
   fullName() {
     return `${this.profile.firstName} ${this.profile.lastName}`;
