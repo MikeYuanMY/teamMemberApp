@@ -54,14 +54,9 @@ Template.TeamDetails.events({
 
     const memberID = $("[name=userSelect]").val();
 
-    console.log(teamID, memberID);
-
-    //console.log(this.team);
-
     Meteor.call("member.findOne", teamID, memberID, error => {
       Meteor.call("member.insert", teamID, memberID, error => {
         if (error) {
-          console.log(error);
           swal(error.error, error.reason, "error");
         } else
           swal({
