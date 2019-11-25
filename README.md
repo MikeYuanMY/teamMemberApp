@@ -49,7 +49,7 @@ The project use the following Collection
     }
   ],
   "profile": {
-    "name": "Facebook username", // if the user use facebook login
+    "name": "Facebook username", // added if the user use facebook login
     "firstName": "John",
     "lastName": "Doe"
   },
@@ -97,6 +97,8 @@ For the Meteor packages details refer to the following file
 
 ## To-Do
 
+- Implement Testing for publication and methods
+- Research to see if there is better implementation for Mongo db for team members and users
 - Code clean up and factorizing function
 - Breaking templates into re-usable components
 - Provide ability to edit TeamDetails
