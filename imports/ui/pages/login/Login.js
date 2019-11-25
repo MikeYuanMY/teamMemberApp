@@ -18,9 +18,8 @@ if (Meteor.isClient) {
 
       Meteor.loginWithPassword(username, password, function(error) {
         if (error) {
-          validator.showErrors({
-            loginUsername: error.reason
-          });
+          console.log(error);
+          swal("Login Error", error.reason, "error");
         } else {
           FlowRouter.go("/personal");
         }

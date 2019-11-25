@@ -16,7 +16,7 @@ if (Meteor.isClient) {
         { requestPermissions: ["public_profile", "email"] },
         function(err) {
           if (err) {
-            console.log("Handle errors here: ", err);
+            swal("Facebook Login Error", error.reason, "error");
           } else {
             FlowRouter.go("/personal");
           }
@@ -129,6 +129,7 @@ if (Meteor.isClient) {
           function(error) {
             if (error) {
               console.log("Error: " + error.reason);
+              swal("Register Error", error.reason, "error");
             } else {
               FlowRouter.go("/personal");
             }
