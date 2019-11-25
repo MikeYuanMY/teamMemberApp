@@ -8,7 +8,7 @@ import "../../ui/layouts/body/body.js";
 import "../../ui/pages/home/home.js";
 import "../../ui/pages/not-found/not-found.js";
 import "../../ui/pages/login/login.js";
-import "../../ui/pages/register/register.js";
+import "../../ui/pages/register/Register.js";
 import "../../ui/pages/personal/personal.js";
 import "../../ui/pages/teams/teams.js";
 import "../../ui/pages/teamDetails/TeamDetails.js";
@@ -16,16 +16,9 @@ import "../../ui/pages/teamDetails/TeamDetails.js";
 
 // register
 FlowRouter.route("/register", {
-  // triggersEnter: [
-  //   (context, redirect) => {
-  //     if (!Meteor.userId()) {
-  //       redirect("/");
-  //     }
-  //   }
-  // ],
   name: "register",
   action() {
-    BlazeLayout.render("App_body", { main: "register" });
+    BlazeLayout.render("App_body", { main: "RegisterForm" });
   }
 });
 

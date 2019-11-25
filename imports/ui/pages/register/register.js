@@ -1,4 +1,4 @@
-import "./register.html";
+import "./Register.html";
 
 import { Accounts } from "meteor/accounts-base";
 import { FlowRouter } from "meteor/kadira:flow-router";
@@ -8,7 +8,7 @@ import { Template } from "meteor/templating";
 
 if (Meteor.isClient) {
   // Prevent default browser form submit
-  Template.register.events({
+  Template.RegisterForm.events({
     "click .login-facebook": function(e) {
       e.preventDefault();
 
@@ -81,7 +81,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.register.onRendered(() => {
+  Template.RegisterForm.onRendered(() => {
     const validator = $("#registerForm").validate({
       // Add classes to validation display
       errorClass: "help-block text-right animated fadeInDown",

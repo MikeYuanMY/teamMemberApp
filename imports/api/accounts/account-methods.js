@@ -1,7 +1,13 @@
 import { Meteor } from "meteor/meteor";
+import { check } from "meteor/check";
 
 Meteor.methods({
   "account.update"(userId, username, email, firstName, lastName) {
+    check(userId, String);
+    check(username, String);
+    check(email, String);
+    check(firstName, String);
+    check(lastName, String);
 
     return Meteor.users.update(
       { _id: userId },
@@ -16,6 +22,6 @@ Meteor.methods({
     );
   },
   "account.all"() {
-      return Meteor.users.find();
+    return Meteor.users.find();
   }
 });
