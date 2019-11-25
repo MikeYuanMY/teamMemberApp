@@ -3,12 +3,12 @@ import { Meteor } from "meteor/meteor";
 import { jQuery } from "meteor/jquery";
 import { Template } from "meteor/templating";
 import { $ } from "meteor/jquery";
-import "./login.html";
+import "./Login.html";
 
 import "/public/assets/js/app.js";
 //import "/public/assets/js/pages/base_pages_login.js";
 if (Meteor.isClient) {
-  Template.login.events({
+  Template.LoginForm.events({
     "submit form": function submitForm(event) {
       // Prevent default browser form submit
 
@@ -65,7 +65,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.login.onRendered(() => {
+  Template.LoginForm.onRendered(() => {
     const validator = $("#loginForm").validate({
       // Add classes to validation display
       errorClass: "help-block text-right animated fadeInDown",

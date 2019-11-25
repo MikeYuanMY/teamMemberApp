@@ -1,0 +1,25 @@
+<template name="UserTeams">
+
+    <div class="block">
+        <div class="block-header">
+            <ul class="block-options">
+
+            </ul>
+            <h3 class="block-title">User Teams</h3>
+        </div>
+        <div class="block-content">
+            {{#if userTeams}}
+            <ul>
+                {{#each team in userTeams}}
+                <li><a href="/teams/{{team._id}}">{{team.name}}</a></li>
+                {{/each}}
+            </ul>
+
+            {{else}}
+            <p>This user has not joined any team</p>
+            <p>Go to Teams to select team and add yourself</p>
+            {{/if}}
+        </div>
+    </div>
+
+</template>

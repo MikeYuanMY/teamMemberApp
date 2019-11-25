@@ -1,7 +1,7 @@
 import { Teams } from "/imports/api/teams/teams.js";
 import { Meteor } from "meteor/meteor";
 
-import "./teams.html";
+import "./Teams.html";
 
 Template.Teams.onCreated(() => {
   //console.log("Teams templated created");

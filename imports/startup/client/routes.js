@@ -7,10 +7,10 @@ import "../../ui/pages/landing/landing.js";
 import "../../ui/layouts/body/body.js";
 import "../../ui/pages/home/home.js";
 import "../../ui/pages/not-found/not-found.js";
-import "../../ui/pages/login/login.js";
+import "../../ui/pages/login/Login.js";
 import "../../ui/pages/register/Register.js";
-import "../../ui/pages/personal/personal.js";
-import "../../ui/pages/teams/teams.js";
+import "../../ui/pages/personal/Personal.js";
+import "../../ui/pages/teams/Teams.js";
 import "../../ui/pages/teamDetails/TeamDetails.js";
 // Set up all routes in the app
 
@@ -24,16 +24,9 @@ FlowRouter.route("/register", {
 
 // login page
 FlowRouter.route("/login", {
-  // triggersEnter: [
-  //   (context, redirect) => {
-  //     if (!Meteor.userId()) {
-  //       redirect("/");
-  //     }
-  //   }
-  // ],
   name: "login",
   action() {
-    BlazeLayout.render("App_body", { main: "login" });
+    BlazeLayout.render("App_body", { main: "LoginForm" });
   }
 });
 
@@ -47,7 +40,7 @@ FlowRouter.route("/personal", {
     }
   ],
   action() {
-    BlazeLayout.render("App_body", { main: "personal" });
+    BlazeLayout.render("App_body", { main: "Personal" });
   }
 });
 
