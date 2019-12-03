@@ -62,12 +62,12 @@
 <template name='projectRow'>
     <div class='row span12'>
         {{#each row }}
-        {{> projectItem}}
+        {{> teamItem}}
         {{/each}}
     </div>
 </template>
 
-<template name="projectItem">
+<template name="teamItem">
     <div class="col-md-3">
         <a class="block block-link-hover2" href="/teams/{{_id}}">
             <div class="block-content block-content-full text-center">

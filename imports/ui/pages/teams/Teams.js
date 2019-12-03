@@ -16,22 +16,24 @@ Template.Teams.helpers({
     size = 4;
     while (all.length > 4) {
       chunks.push({ row: all.slice(0, 4) });
+      //console.log(chunks);
       all = all.slice(4);
     }
     chunks.push({ row: all });
+    console.log(chunks);
     return chunks;
   },
   breakTimeReset: function() {
     Template.Teams.doCount = 0;
-  },
-  breakTime: function() {
-    count = Template.Teams.doCount + 1;
-    console.log(count);
-    Template.Teams.doCount = count;
-
-    if (count % 4 == 0) return "</div><!-- why? --><div class='row'>";
-    else return "";
   }
+  // breakTime: function() {
+  //   count = Template.Teams.doCount + 1;
+  //   console.log(count);
+  //   Template.Teams.doCount = count;
+
+  //   if (count % 4 == 0) return "</div><!-- why? --><div class='row'>";
+  //   else return "";
+  // }
 });
 
 Template.Teams.events({
