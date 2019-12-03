@@ -93,8 +93,8 @@ Template.Profile.onRendered(() => {
         lastName,
         error => {
           if (error) {
-            swal("error.error", "error.reason", "error");
-            console.log(error.error, error.reason);
+            swal(error.error, error.reason, "error");
+            //console.log(error.error, error.reason);
           } else
             swal({
               title: "Updated!",
