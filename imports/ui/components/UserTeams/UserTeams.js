@@ -14,7 +14,7 @@ Template.UserTeams.onCreated(function() {
 Template.UserTeams.helpers({
   userTeams: function() {
     const userID = Meteor.userId();
-    const userTeams = Teams.find({ members: userID });
+    const userTeams = Teams.find({ members: userID }).fetch();
 
     return userTeams.count() === 0 ? null : userTeams;
   }
