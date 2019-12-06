@@ -12,7 +12,7 @@ Meteor.methods({
     return Meteor.users.update(
       { _id: userId },
       {
-        $set: {
+        set: {
           username: username,
           "emails.0.address": email,
           "profile.firstName": firstName,
