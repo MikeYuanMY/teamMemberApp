@@ -24,7 +24,7 @@ Template.TeamDetails.helpers({
 
     if (team) {
       const members = team.members;
-      const teamMembers = Meteor.users.find({ _id: { $in: members } });
+      const teamMembers = Meteor.users.find({ _id: { $in: members } }, { fields: { _id: 1 } });
 
       return teamMembers;
     }
